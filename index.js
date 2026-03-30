@@ -23,9 +23,8 @@ const corsOrigin = parseCorsOrigins();
 // ─── SOCKET.IO ────────────────────────────────────────────────────────────────
 const io = new Server(server, {
   cors: {
-    origin: corsOrigin,
-    methods: ['GET', 'POST'],
-    credentials: true
+    origin: '*',
+    methods: ['GET', 'POST']
   }
 });
 
